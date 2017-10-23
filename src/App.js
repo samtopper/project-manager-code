@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
 
-  componentWillMount(){
+  getProjects(){
     this.setState({projects: [
       {
         id:uuid.v4(),
@@ -30,6 +30,10 @@ class App extends Component {
         category: 'Web Development'
       }
     ]});
+  }
+  
+  componentWillMount(){
+    this.getProjects();
   }
   
   handleAddProject(project){

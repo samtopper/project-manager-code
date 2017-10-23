@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(227, 227, 233);
+    padding: 10px;
+    border: bisque 2px dotted;
+}
+
+.heading{
+    color: rgb(23, 143, 117);
+}
+
+.green{
+    color: rgb(94, 141, 83);
+}
+
+.Projects{
+    color: brown;
+}
+
+.link{
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+.category{
+    color: rgb(70, 60, 60);
+}

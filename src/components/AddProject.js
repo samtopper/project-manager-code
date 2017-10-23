@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import PropTypes from 'prop-types';
 
 class AddProject extends Component {
     constructor(){
@@ -35,14 +36,15 @@ class AddProject extends Component {
     });
         return (
         <div>
-            <h3>Add Project</h3>
+            <h3 className="heading">Add Project</h3>
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <div>
-                    <label>Title</label> <br />
-                    <input type="text" ref="title" />
+                    <label className="green">Title</label> <br />
+                    <input type="text" ref="title" /> <br />
                 </div>
                 <div>
-                    <label>Category</label> <br />
+                    <br />
+                    <label className="green">Category</label> <br />
                     <select ref="category">
                         {categoryOptions}
                     </select>
@@ -54,6 +56,11 @@ class AddProject extends Component {
         </div>
         );
     } 
+}
+
+AddProject.propTypes = {
+    categories: PropTypes.array,
+    addProject: PropTypes.func
 }
 
 export default AddProject;
